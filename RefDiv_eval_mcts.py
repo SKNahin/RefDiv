@@ -47,7 +47,7 @@ def get_args():
     parser.add_argument("--model", type=str, default="qwen3")
     parser.add_argument("--save_suffix", type=str, default="normal")
     parser.add_argument("--API_key", type=str, default=None)
-    parser.add_argument("--algorithm", type=str, default="autodan", choices=["autodan", "diversity"])
+    parser.add_argument("--algorithm", type=str, default="diversity", choices=["autodan", "diversity"])
     parser.add_argument("--seed", type=int, default=4)
     parser.add_argument("--output", type=str, default="./outputs")
 

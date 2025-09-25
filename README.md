@@ -8,12 +8,12 @@ Deploy the model in vLLM before running the script.
 
 **Best-of-N:**
 ```bash
-python3 check_gcg_bon.py --model "vllm-model-name" --suffix "suffix"
+python3 gcg_eval_bon.py --model "vllm-model-name" --suffix "suffix"
 ```
 
 **MCTS:**
 ```bash
-python3 check_gcg_mcts.py --model "vllm-model-name" --suffix "suffix"
+python3 gcg_eval_mcts.py --model "vllm-model-name" --suffix "suffix"
 ```
 
 ## Run AutoDAN
@@ -45,6 +45,7 @@ python3 Refdif_eval_bon8.py --batch_size 32 --num_steps 25 --device 1 --model ll
 For `n=2` and `n=16`, run `Refdif_eval_bon2.py` and `Refdif_eval_bon16.py` respectively.
 
 **MCTS:**
+Ensure the model is deployed on vLLM server with the same name as mentioned in `config.py`.
 ```bash
-python3 RefDiv_eval_mcts_base.py --batch_size 32 --num_steps 25 --device 1 --model llama3 --save_suffix PairRM-base-8-new-mcts-Exp2-2 --algorithm diversity --seed 6 2>&1 | tee logs/llama3-8b-PairRM-base-8-new-mcts-Exp2-2.txt
+python3 RefDiv_eval_mcts.py --batch_size 32 --num_steps 25 --device 1 --model llama3 --save_suffix PairRM-base-8-new-mcts-Exp2-2 --algorithm diversity --seed 6 2>&1 | tee logs/llama3-8b-PairRM-base-8-new-mcts-Exp2-2.txt
 ```
