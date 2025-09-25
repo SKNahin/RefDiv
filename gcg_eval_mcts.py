@@ -31,7 +31,7 @@ def load_json(path):
 import argparse
 
 parser = argparse.ArgumentParser(description="Configs")
-parser.add_argument("--model", type=str, default="./models/unsloth/Meta-Llama-3.1-8B-Instruct")
+parser.add_argument("--model", type=str, default="./models/meta-llama/Llama-3.1-8B-Instruct")
 parser.add_argument("--suffix", type=str, default="llama3")
 args = parser.parse_args()
 
