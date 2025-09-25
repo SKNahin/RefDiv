@@ -8,7 +8,7 @@ Deploy the model in vLLM before running the script.
 
 **Best-of-N:**
 ```bash
-python3 gcg_eval_bon.py --model "vllm-model-name" --suffix "suffix"
+python3 gcg_eval_bon8.py --model "vllm-model-name" --suffix "suffix"
 ```
 
 **MCTS:**
